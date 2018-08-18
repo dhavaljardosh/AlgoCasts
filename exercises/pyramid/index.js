@@ -14,6 +14,32 @@
 //       ' ### '
 //       '#####'
 
-function pyramid(n) {}
+function pyramid(n) {
+    const maxWidth = n*2 -1;
+    
+    for(var step= 1;step<n+1 ; step++){
+        var consoleOutput = "", iterate=0;
+        var possibleInputs = step*2 -1;
+        var startPosition = (maxWidth-possibleInputs)/2;
+        // console.log(maxWidth,"MaX WIdth");
+        // console.log(possibleInputs,'Possible Inputs');
+        // console.log(startPosition, "Starting Position");
+        while(iterate<maxWidth){
+            if(iterate == startPosition && possibleInputs!=0 ){
+                consoleOutput += "#";
+                startPosition++;
+                possibleInputs--;
+                iterate++;
+            }else{
+                consoleOutput += " "
+                iterate++;
+            }
+        }
+        
+        
+        console.log(consoleOutput);
+    }
+
+}
 
 module.exports = pyramid;

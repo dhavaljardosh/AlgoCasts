@@ -12,6 +12,25 @@
 //   c.next = b;
 //   circular(l) // true
 
-function circular(list) {}
+function circular(list) {
+    if(list.size()==1){
+        return false;
+    }
+    var prev = list.next;
+    var next = list.next.next;
+    var count = 0;
+    // while(1){
+    //     if(prev == next){
+    //         return true;
+    //     }
+    //     else{
+    //         count++;
+    //         if(count==list.size()){
+    //             return false;
+    //         }
+
+    //     }
+    // }
+}
 
 module.exports = circular;

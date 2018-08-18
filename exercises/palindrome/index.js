@@ -7,6 +7,38 @@
 //   palindrome("abba") === true
 //   palindrome("abcdefg") === false
 
-function palindrome(str) {}
+function palindrome(str) {
+    var i = 0, j= str.length-1;
+    var isPalindrome = true;
+
+    if(str.length%2==0){
+        while(i<j){
+            if(str[i]==str[j]){
+                console.log("MATCH");
+                console.log(i,j);
+                i++; j--;
+            }else{
+                isPalindrome = false;
+                return isPalindrome
+            }
+        }
+    } else{
+        while(i!=j){
+            if(str[i]==str[j]){
+                i++; j--;
+            }else{
+                isPalindrome= false;
+                return isPalindrome;
+            }
+
+        }
+    }
+
+    return isPalindrome;
+
+    
+
+    
+}
 
 module.exports = palindrome;
